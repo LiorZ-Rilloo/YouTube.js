@@ -6,6 +6,7 @@ const TAG = 'JsRuntime';
 
 export default function evaluate(code: string, env: Record<string, VMPrimative>) {
   Log.debug(TAG, 'Evaluating JavaScript:\n', code);
+  Log.debug(TAG, 'With env:\n', env);
 
   const runtime = new Jinter();
 
