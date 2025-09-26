@@ -6,6 +6,9 @@ import type Actions from '../core/Actions.js';
 import type Format from '../parser/classes/misc/Format.js';
 import type { IPlayabilityStatus, IStreamingData } from '../parser/index.js';
 import type { DownloadOptions, FormatOptions } from '../types/index.js';
+import { debug } from './Log.js';
+
+const TAG = 'JSDOWNLOAD';
 
 export async function download(
   options: DownloadOptions,
@@ -31,7 +34,9 @@ export async function download(
   };
 
   const format = chooseFormat(opts, streaming_data);
+  debug(TAG, 'Format chosen:', format);
   const format_url = format.decipher(player);
+  debug(TAG, 'Format URL:', format_url);
 
   // If we're not downloading the video in chunks, we just use fetch once.
   if (opts.type === 'video+audio' && !options.range) {
