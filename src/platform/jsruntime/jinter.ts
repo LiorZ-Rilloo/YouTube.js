@@ -10,6 +10,7 @@ export default function evaluate(code: string, env: Record<string, VMPrimative>)
   const runtime = new Jinter();
 
   for (const [ key, value ] of Object.entries(env)) {
+    Log.debug(TAG, `Setting scope key ${key}, value:`, value);
     runtime.scope.set(key, value);
   }
 
