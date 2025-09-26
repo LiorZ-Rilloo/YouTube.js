@@ -1,6 +1,6 @@
-import { YTNode } from "../helpers.js";
-import NavigationEndpoint from "./NavigationEndpoint.js";
-import { RawNode } from "../types/index.js";
+import { YTNode } from '../helpers.js';
+import NavigationEndpoint from './NavigationEndpoint.js';
+import type { RawNode } from '../types/index.js';
 
 class TicketEvent extends YTNode {
   static type = 'TicketEvent';

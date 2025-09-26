@@ -1,7 +1,7 @@
-import { ObservedArray, YTNode } from "../helpers.js";
-import { RawNode } from "../types/index.js";
-import TicketEvent from "./TicketEvent.js";
-import { Parser } from "../index.js";
+import { type ObservedArray, YTNode } from '../helpers.js';
+import type { RawNode } from '../types/index.js';
+import TicketEvent from './TicketEvent.js';
+import { Parser } from '../index.js';
 
 export default class TicketShelf extends YTNode {
   static type = 'TicketShelf';
